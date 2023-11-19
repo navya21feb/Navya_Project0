@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Be Fit Gym</title>
+    <style>
+        body {
+            background-image: url('https://neural.love/cdn/thumbnails/1edce874-85c8-60ea-81a4-1fc384052d34/8221024f-c742-5f5e-a0d5-ef7d302ab8f2.webp?Expires=1704067199&Signature=1crMXMaUdo81CCuFxPiG4xUuUmaKDRygOooRTA8BNfxb3WdWZnPSpWDUH0GH-koTbD2ZE3HtWz0nmHASleyF8HPhOYLzGfLdx5wkkIw4DkmoTl~Th13sUGHFrEfL7P8WoU2JmwIelPvmHOw7bopeeE38iz-idFORqsQZv1F5BWHf4vR5B0WNNUOvLYM40nBDjI0hYyZ8Yiu6yJDQZ1WQUNTHaNUw~GO~lZRMU6kxwcDMeImoo1fMkZScLAoe3tmbQq5uh4mMYJhAKEpRE11W8f1etz3S5Hewvamc5QJH9ldXQvPz83LWj3U0lN3z3aS1hZ~DLQdnXu6sfbqLLcIEJA__&Key-Pair-Id=K2RFTOXRBNSROX');
+            background-size: cover;
+            /*this helps to put entire picture on complete screen*/
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            columns: 2px;
+        }
+
+        .exer1 {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            columns: 2px;
+        }
+
+        img {
+            height: 190px;
+            width: 210px;
+            margin: 5px 30px;
+        }
+
+        .text {
+            font-weight: bold;
+            font-size: 40px;
+            color: white;
+
+        }
+
+        .navbar {
+            display: block;
+            border: 3px solid black;
+            background-color: black;
+            border-radius: 4px;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin: 3px 30px;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        .search {
+            float: right;
+            margin: 3px 8px;
+        }
+
+        #icon {
+            height: 25px;
+            width: 30px;
+            margin: 2px 2px;
+        }
+
+        .exercises {
+            display: block;
+        }
+
+        img {
+            height: 250px;
+            width: 250px;
+        }
+
+        .card {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .aero {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .dance {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .weighttraining {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .zumba {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .yoga {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #facebook {
+            float: right;
+            height: 25px;
+            width: 30px;
+            margin: 1px 5px;
+        }
+
+        #twitter {
+            float: right;
+            height: 25px;
+            width: 30px;
+            margin: 1px 5px;
+        }
+
+        #insta {
+            float: right;
+            height: 25px;
+            width: 30px;
+            margin: 1px 5px;
+        }
+
+        .social {
+            float: right;
+            margin: 5px 5px;
+        }
+
+        h3 {
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .contain {
+            border: 2px solid white;
+            margin: 106px 400px;
+            padding: 100px;
+            width: 33%;
+            border-radius: 28px;
+        }
+
+        .form-group input {
+            font-family: sans-serif;
+            text-align: center;
+            display: block;
+            width: 490px;
+            padding: 1px;
+            border: 2px solid black;
+            margin: 11px auto;
+            font-size: 25px;
+            border-radius: 8px;
+        }
+
+        .last {
+            color: white;
+            background-color: rgb(110, 63, 25);
+            border: 2px solid white;
+            border-radius: 6px;
+            padding: 4px;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        .right {
+            color: white;
+            font-weight: bold;
+            margin: 5px 5px;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: yellow;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Classes</a>
+                    <div class="dropdown-content">
+                        <a href="#">Morning</a>
+                        <a href="#">Afternoon</a>
+                        <a href="#">Evening</a>
+                    </div>
+                </li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact us</a></li>
+                <div class="search">
+                    <img id="icon"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWw_dz8j5Eu06qGZamdTNLQBEVYYMjqvAwSQ&usqp=CAU"
+                        alt="search" class="responsive">
+                    <input type="search" class="search" id="search" placeholder="search this website">
+                </div>
+                <div class="social">
+                    <img id="facebook"
+                        src="https://images.hindustantimes.com/tech/img/2023/09/21/1600x900/fb_1695273515215_1695273522698.jpg"
+                        alt="social">
+                    <img id="twitter" src="https://cdn-icons-png.flaticon.com/512/3938/3938028.png" alt="social">
+                    <img id="insta" src="https://cdn.mos.cms.futurecdn.net/6dDoc8GV9fYUPExgLYPqqT-1200-80.jpg"
+                        alt="social">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="img">
+            <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gym-logo-template-design-04d583c8ca3558ea0ea21763a57e7ba6_screen.jpg?ts=1604496976"
+                alt="gym">
+        </div>
+        <div class="text">
+            <h1>Be Fit Gym</h1>
+            <h5>Be Fit,Be in Style</h5>
+            <h2>Welcome to Be Fit Gym!!</h2>
+        </div>
+    </div>
+    <div class="exercises">
+        <div class="exer1">
+            <div class="card">
+                <h3>Cardio</h3>
+                <img src="https://media.istockphoto.com/id/1132086660/photo/side-view-of-beautiful-muscular-woman-running-on-treadmill.jpg?s=612x612&w=0&k=20&c=5Vq_BJjG7sbIyKIP-Adu0pChReDXm0dC7BVPvto2M0I="
+                    alt="gym">
+                <img src="https://www.shutterstock.com/image-photo/group-young-athlete-male-female-600nw-2187804365.jpg"
+                    alt="gym">
+            </div>
+
+            <div class="aero">
+                <h3>Aerobics</h3>
+                <img src="https://www.thegym.in/img/the-gym-aerobic.jpg" alt="gym">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT314ApgOJIAMqkd5ZGT6y18B92hUBJJpKWDQ&usqp=CAU"
+                    alt="gym">
+            </div>
+
+            <div class="dance">
+                <h3>Dance</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaml_9lvgoE2APuEHAWLnasKzp5rJXFLvSDg&usqp=CAU"
+                    alt="gym">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFBMpIbyXwM4uAF5YKWTfvOW1CERcfTQKhVg&usqp=CAU"
+                    alt="gym">
+            </div>
+
+            <div class="weighttraining">
+                <h3>Weight Training</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv0S3HU9WOvoQjZ1JkQ85NMUvC0zX98f6kdA&usqp=CAU"
+                    alt="gym">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBUUSfXBN9MmQwvlPfDFgWc6H6GwsxVg4R_w&usqp=CAU"
+                    alt="gym">
+            </div>
+
+            <div class="zumba">
+                <h3>Zumba</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGxq15TQhja4bAMfrxMj57yEw0SQ88OPMTA&usqp=CAU"
+                    alt="gym">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZf1vmgHii5hDHTkyjQOM3fDi9Ev97yIc_PQ&usqp=CAU"
+                    alt="gym">
+            </div>
+
+            <div class="yoga">
+                <h3>Yoga</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrPzh4jV0yDgxgAsMmlmmnvHQhqxSj5lbWDA&usqp=CAU"
+                    alt="gym">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8yAU2rct5SrtVEymueijNSg-JMVF6VcsTkQ&usqp=CAU"
+                    alt="gym">
+            </div>
+        </div>
+    </div>
+    <div class="contain">
+        <h1 style="color:white;">Join the best gym of Delhi now</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Locality">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Email Id">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Phone Number">
+            </div>
+
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <div class="last">
+            <h4>Our Networks</h4>
+            <p>BE FIT GYM PITAMPURA| BE FIT GYM PATEL NAGAR| BE FIT GYM RAJOURI GARDEN| BE FIT GYM JANAKPURI| BE FIT GYM
+                PASCHIM VIHAR| BE FIT GYM MODEL TOWN| BE FIT GYM VIKAS PURI| BE FIT GYM MALVIYA NAGAR| BE FIT GYM
+                SHALIMAR BAGH| BE FIT GYM ROHINI, SEC 15| BE FIT GYM ROHINI, SEC 9| BE FIT GYM ASHOK VIHAR| BE FIT GYM
+                KAILASH COLONY| BE FIT GYM KAROLBAGH| BE FIT GYM KIRTI NAGAR| BE FIT GYM DWARKA</p>
+        </div>
+        <div class="right">
+            <p>For any information</p>
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </footer>
+</body>
+
+</html>
